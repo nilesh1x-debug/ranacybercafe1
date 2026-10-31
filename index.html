@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rana Cyber Cafe | Jangal Dharampur, Nalagarh</title>
+<meta name="description" content="Computer rental, online portal assistance, printing and scanning, and bill payments at Main Bazar, Jangal Dharampur, Nalagarh. Open daily 9 AM to 8 PM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f8fafc;--surface:#fff;--ink:#1e293b;--muted:#64748b;--line:#e2e8f0;--panel:#1e293b;--btn:#1e293b;--btn-on:#f8fafc;--hl:#eef2f6;--ok:#5f8a76;
+--font:"Outfit","Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f172a;--surface:#162033;--ink:#e2e8f0;--muted:#94a3b8;--line:#2a3750;--panel:#1e293b;--btn:#e2e8f0;--btn-on:#0f172a;--hl:#1a2740;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f172a;--surface:#162033;--ink:#e2e8f0;--muted:#94a3b8;--line:#2a3750;--panel:#1e293b;--btn:#e2e8f0;--btn-on:#0f172a;--hl:#1a2740;color-scheme:dark}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--font);letter-spacing:.01em}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:1.25rem}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+.panel :focus-visible{outline-color:#f1f5f9}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:600;font-size:1.125rem;letter-spacing:.02em;text-decoration:none}
+nav{display:flex;gap:1.5rem}
+nav a{font-size:.95rem;color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--ink)}
+
+section{padding-block:clamp(3.5rem,8vw,6rem);border-top:1px solid var(--line)}
+.hero{border-top:0;padding-block:clamp(3rem,8vw,6.5rem)}
+.hero .wrap{display:grid;gap:3rem;align-items:center}
+@media (min-width:880px){.hero .wrap{grid-template-columns:1.35fr .85fr;gap:5rem}}
+.badge{display:inline-flex;align-items:center;gap:.75rem;padding:.55rem 1rem .55rem .85rem;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:.9rem;color:var(--muted)}
+.badge strong{color:var(--ink);font-weight:600;font-size:1rem}
+.stars{display:flex;gap:2px;color:var(--ink)}
+.stars svg{width:15px;height:15px;fill:currentColor}
+h1{margin:1.75rem 0 1.25rem;font-weight:500;font-size:clamp(2.35rem,5.6vw,4.25rem);line-height:1.08;letter-spacing:-.015em;max-width:15ch}
+.lede{margin:0 0 2rem;max-width:34rem;color:var(--muted);font-size:1.15rem;line-height:1.7}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.85rem 1.35rem;border:1px solid var(--btn);border-radius:10px;background:var(--btn);color:var(--btn-on);font:500 .95rem/1.2 var(--font);letter-spacing:.02em;text-decoration:none;cursor:pointer}
+.btn:hover{opacity:.88}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--muted);opacity:1}
+.btn.light{background:#f1f5f9;border-color:#f1f5f9;color:#1e293b}
+.btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+.panel{background:var(--panel);color:#f1f5f9;border-radius:18px;padding:2rem}
+.panel h2{margin:0 0 1.25rem;font-size:1.25rem;font-weight:500}
+.panel address{font-style:normal;color:#cbd5e1;line-height:1.7;margin-bottom:1rem}
+.panel p{margin:0 0 1.5rem;color:#94a3b8;font-size:.95rem}
+.status{display:flex;align-items:center;gap:.6rem;font-size:.95rem;margin-bottom:1.5rem}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:#94a3b8;flex:none}
+.status[data-open="true"]::before{background:var(--ok)}
+
+h2.title{margin:0 0 .75rem;font-weight:500;font-size:clamp(1.75rem,3.4vw,2.5rem);line-height:1.15;letter-spacing:-.01em}
+.intro{margin:0 0 3rem;max-width:34rem;color:var(--muted)}
+.cards{display:grid;gap:1.25rem}
+@media (min-width:700px){.cards{grid-template-columns:1fr 1fr}}
+.card{padding:1.75rem;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+.card svg{width:26px;height:26px;fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-bottom:1.25rem}
+.card h3{margin:0 0 .5rem;font-weight:500;font-size:1.2rem}
+.card p{margin:0;color:var(--muted);font-size:1rem;max-width:30rem}
+
+.grid2{display:grid;gap:3rem}
+@media (min-width:860px){.grid2{grid-template-columns:1fr 1fr;gap:5rem}}
+.tbl h3{margin:0 0 .5rem;font-weight:500;font-size:1.1rem}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:1rem}
+th,td{padding:.95rem .5rem .95rem 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-weight:400;color:var(--muted)}
+thead th{font-size:.9rem;padding-top:.5rem}
+tbody th{color:var(--ink);font-weight:500;width:46%}
+.hours td{white-space:nowrap}
+.hours th{width:50%}
+tr.today th,tr.today td{background:var(--hl);font-weight:600;color:var(--ink)}
+tr.today th{padding-left:.75rem;border-radius:8px 0 0 8px}
+tr.today td{padding-right:.75rem;border-radius:0 8px 8px 0}
+.tag{margin-left:.5rem;font-size:.8rem;font-weight:400;color:var(--muted)}
+.note{margin:1rem 0 0;color:var(--muted);font-size:.9rem}
+
+.contact address{font-style:normal;margin:0 0 1rem;font-size:1.1rem;line-height:1.7}
+.contact .meta{margin:0 0 2rem;color:var(--muted)}
+.contact .status{color:var(--ink);margin-bottom:2rem}
+.contact .status::before{background:var(--muted)}
+.contact .status[data-open="true"]::before{background:var(--ok)}
+form{padding:2rem;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+.field{margin-bottom:1.25rem}
+label{display:block;margin-bottom:.4rem;font-size:.9rem;font-weight:500}
+input,select,textarea{width:100%;padding:.8rem .95rem;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit;font-size:1rem}
+textarea{min-height:140px;resize:vertical}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
+#formStatus{margin:1rem 0 0;font-size:.9rem;color:var(--muted);min-height:1.4em}
+.fine{margin:1rem 0 0;font-size:.85rem;color:var(--muted)}
+
+footer{padding-block:2.5rem calc(2.5rem + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:.5rem 2rem;justify-content:space-between}
+@media (max-width:520px){nav{gap:1rem}.panel,form{padding:1.5rem}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="star" viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol></svg>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">Rana Cyber Cafe</a>
+    <nav aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#hours">Hours</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="badge" role="img" aria-label="Rated 5.0 out of 5 stars, verified directory rating">
+          <span class="stars" aria-hidden="true"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span>
+          <span><strong>5.0</strong> out of 5, verified directory rating</span>
+        </div>
+        <h1>Computers, printing and online applications in Jangal Dharampur.</h1>
+        <p class="lede">Rana Cyber Cafe gives you a workstation, hands-on help with portals and government forms, document printing and scanning, and bill payments. You pay for the time you use.</p>
+        <div class="actions">
+          <a class="btn" href="#services">View services</a>
+          <a class="btn ghost" href="#contact">Send a message</a>
+        </div>
+      </div>
+
+      <aside class="panel" aria-labelledby="visit">
+        <h2 id="visit">Visit the cafe</h2>
+        <address>Main Road, Main Bazar,<br>Jangal Dharampur, Nalagarh,<br>District Solan, Himachal Pradesh 173205</address>
+        <p>On the Pinjore–Swarghat Road (MDR7) route.</p>
+        <div class="status" data-status>Open daily, 9:00 AM to 8:00 PM</div>
+        <a class="btn light" href="https://www.google.com/maps/search/?api=1&amp;query=Rana+Cyber+Cafe+Main+Bazar+Jangal+Dharampur+Nalagarh+Solan+173205" target="_blank" rel="noopener noreferrer">Open in Google Maps
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      </aside>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <h2 class="title">Services</h2>
+      <p class="intro">Four services, all handled in person at the cafe.</p>
+      <div class="cards">
+        <article class="card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+          <h3>High-speed workstations</h3>
+          <p>Dedicated computers and high-bandwidth browsing terminals, rented by the time you use them.</p>
+        </article>
+        <article class="card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>
+          <h3>Digital portal assistance</h3>
+          <p>Hands-on help navigating online applications, recruitment portals and government forms.</p>
+        </article>
+        <article class="card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3h10v6"/><rect x="4" y="9" width="16" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>
+          <h3>Document processing</h3>
+          <p>High-volume laser printing, secure digital scanning and photocopying.</p>
+        </article>
+        <article class="card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6.5 12h.01M17.5 12h.01"/></svg>
+          <h3>Financial operations</h3>
+          <p>Domestic money transfers and digital utility bill payments.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="hours">
+    <div class="wrap">
+      <h2 class="title">Hours and billing</h2>
+      <p class="intro">Open every day of the week. You pay for the time you actually use.</p>
+      <div class="grid2">
+        <div class="tbl">
+          <h3>Opening hours</h3>
+          <div class="scroll">
+          <table class="hours">
+            <thead><tr><th scope="col">Day</th><th scope="col">Hours (IST)</th></tr></thead>
+            <tbody>
+              <tr data-day="Monday"><th scope="row">Monday</th><td>9:00 AM – 8:00 PM</td></tr>
+              <tr data-day="Tuesday"><th scope="row">Tuesday</th><td>9:00 AM – 8:00 PM</td></tr>
+              <tr data-day="Wednesday"><th scope="row">Wednesday</th><td>9:00 AM – 8:00 PM</td></tr>
+              <tr data-day="Thursday"><th scope="row">Thursday</th><td>9:00 AM – 8:00 PM</td></tr>
+              <tr data-day="Friday"><th scope="row">Friday</th><td>9:00 AM – 8:00 PM</td></tr>
+              <tr data-day="Saturday"><th scope="row">Saturday</th><td>9:00 AM – 8:00 PM</td></tr>
+              <tr data-day="Sunday"><th scope="row">Sunday</th><td>9:00 AM – 8:00 PM</td></tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+        <div class="tbl">
+          <h3>How billing works</h3>
+          <div class="scroll">
+          <table>
+            <thead><tr><th scope="col">Item</th><th scope="col">Detail</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Method</th><td>Dynamic metered billing</td></tr>
+              <tr><th scope="row">Basis</th><td>Terminal usage time</td></tr>
+              <tr><th scope="row">Accuracy</th><td>Calculated to the time you actually used</td></tr>
+              <tr><th scope="row">Current rates</th><td>Ask at the cafe</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p class="note">You are never charged for a fixed block of time you did not use.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap grid2">
+      <div>
+        <h2 class="title">Visit or message us</h2>
+        <p class="intro">Come to the cafe, or send a message with what you need help with.</p>
+        <address>Rana Cyber Cafe<br>Main Road, Main Bazar, Jangal Dharampur,<br>Nalagarh, District Solan,<br>Himachal Pradesh 173205</address>
+        <p class="meta">On the Pinjore–Swarghat Road (MDR7) route.</p>
+        <div class="status" data-status>Open daily, 9:00 AM to 8:00 PM</div>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Rana+Cyber+Cafe+Main+Bazar+Jangal+Dharampur+Nalagarh+Solan+173205" target="_blank" rel="noopener noreferrer">Get directions in Google Maps
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      </div>
+
+      <form id="msgForm" aria-labelledby="formTitle">
+        <h3 id="formTitle" style="margin:0 0 1.5rem;font-weight:500;font-size:1.2rem">Send a message</h3>
+        <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="topic">What do you need?</label>
+          <select id="topic" name="topic" required>
+            <option value="">Choose a service</option>
+            <option>Workstation or browsing</option>
+            <option>Portal or form assistance</option>
+            <option>Printing, scanning or photocopying</option>
+            <option>Money transfer or bill payment</option>
+            <option>Something else</option>
+          </select></div>
+        <div class="field"><label for="msg">Message</label><textarea id="msg" name="message" required></textarea></div>
+        <button class="btn" type="submit">Send message</button>
+        <p id="formStatus" role="status" aria-live="polite"></p>
+        <p class="fine">This form does not ask for your phone number or email address.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Rana Cyber Cafe</span>
+    <span>Main Road, Main Bazar, Jangal Dharampur, Nalagarh, Solan, Himachal Pradesh 173205</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  try{
+    var parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Kolkata',weekday:'long',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date());
+    var get=function(t){return parts.filter(function(p){return p.type===t})[0].value};
+    var day=get('weekday'),h=parseInt(get('hour'),10),open=h>=9&&h<20;
+    var msg=open?'Open now, closes at 8:00 PM':'Closed now, opens at 9:00 AM';
+    document.querySelectorAll('[data-status]').forEach(function(el){el.textContent=msg;el.setAttribute('data-open',open)});
+    var row=document.querySelector('[data-day="'+day+'"]');
+    if(row){row.classList.add('today');row.setAttribute('aria-current','date');
+      var tag=document.createElement('span');tag.className='tag';tag.textContent='Today';row.querySelector('th').appendChild(tag)}
+  }catch(e){}
+  var form=document.getElementById('msgForm'),st=document.getElementById('formStatus');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    st.textContent='Preview only: connect this form to a messaging service to receive submissions.';
+  });
+})();
+</script>
+</body>
+</html>
